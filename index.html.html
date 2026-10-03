@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andrea Toyogon | Social Media Manager & Virtual Assistant</title>
+
+    <meta name="description" content="Andrea Toyogon - Social Media Manager and Virtual Assistant specializing in social media management, content creation, customer engagement, Canva design, and lead generation.">
+    <meta name="keywords" content="Andrea Toyogon, Social Media Manager, Virtual Assistant, Social Media Management, Canva, Facebook Management, Content Creation, Customer Support, Lead Generation">
+    <meta name="author" content="Andrea Toyogon">
+
+    <meta property="og:title" content="Andrea Toyogon | Social Media Manager">
+    <meta property="og:description" content="Social Media Manager and Virtual Assistant portfolio of Andrea Toyogon.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           ROOT
+        ========================== */
+
+        :root {
+            --bg: #070517;
+            --bg-secondary: #0d0924;
+            --card: rgba(18, 12, 43, 0.72);
+
+            --primary: #a855f7;
+            --secondary: #6366f1;
+            --pink: #ec4899;
+            --cyan: #22d3ee;
+
+            --text: #ffffff;
+            --muted: #b7b3ca;
+
+            --border: rgba(255,255,255,0.10);
+
+            --shadow:
+                0 20px 60px rgba(0,0,0,0.35);
+
+            --radius: 24px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background:
+                radial-gradient(circle at 15% 20%, rgba(99,102,241,.18), transparent 28%),
+                radial-gradient(circle at 85% 15%, rgba(168,85,247,.18), transparent 28%),
+                radial-gradient(circle at 50% 90%, rgba(236,72,153,.10), transparent 30%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body.light {
+            --bg: #f6f3ff;
+            --bg-secondary: #ffffff;
+            --card: rgba(255,255,255,.78);
+            --text: #171326;
+            --muted: #625b75;
+            --border: rgba(20,10,50,.10);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button,
+        input,
+        textarea {
+            font-family: inherit;
+        }
+
+        /* =========================
+           GALAXY BACKGROUND
+        ========================== */
+
+        .stars,
+        .stars::before,
+        .stars::after {
+            position: fixed;
+            inset: 0;
+            content: "";
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .stars {
+            background-image:
+                radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 1px),
+                radial-gradient(circle, rgba(255,255,255,.5) 1px, transparent 1px);
+            background-size: 110px 110px, 170px 170px;
+            background-position: 20px 30px, 80px 100px;
+            opacity: .28;
+        }
+
+        .stars::before {
+            background:
+                radial-gradient(circle at 20% 30%, rgba(168,85,247,.12), transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(34,211,238,.10), transparent 25%);
+            animation: galaxyMove 14s ease-in-out infinite alternate;
+        }
+
+        @keyframes galaxyMove {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.15);
+            }
+        }
+
+        .nebula {
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: .18;
+            z-index: -3;
+            pointer-events: none;
+        }
+
+        .nebula.one {
+            background: #7c3aed;
+            top: 5%;
+            left: -180px;
+        }
+
+        .nebula.two {
+            background: #ec4899;
+            right: -180px;
+            top: 35%;
+        }
+
+        .nebula.three {
+            background: #2563eb;
+            left: 30%;
+            bottom: -220px;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(18px);
+            background: rgba(7,5,23,.68);
+            border-bottom: 1px solid var(--border);
+        }
+
+        body.light header {
+            background: rgba(255,255,255,.72);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: auto;
+            height: 76px;
+            padding: 0 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Orbitron", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--muted);
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .theme-btn,
+        .menu-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--card);
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        .menu-btn {
+            display: none;
+        }
+
+        /* =========================
+           GENERAL
+        ========================== */
+
+        section {
+            padding: 110px 24px;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-heading .small-title {
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(30px, 5vw, 46px);
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            max-width: 650px;
+            margin: auto;
+            color: var(--muted);
+        }
+
+        /* =========================
+           BUTTONS
+        ========================== */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            padding: 13px 22px;
+
+            border-radius: 999px;
+            border: 1px solid var(--border);
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary)
+            );
+
+            box-shadow:
+                0 10px 30px rgba(99,102,241,.28);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 15px 35px rgba(168,85,247,.35);
+        }
+
+        .btn-outline {
+            background: rgba(255,255,255,.03);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,.08);
+            transform: translateY(-3px);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 150px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 8px 14px;
+            border-radius: 999px;
+
+            background: rgba(168,85,247,.10);
+            border: 1px solid rgba(168,85,247,.25);
+
+            color: #d8b4fe;
+            font-size: 12px;
+            margin-bottom: 22px;
+        }
+
+        .hero-badge span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #4ade80;
+            box-shadow: 0 0 12px #4ade80;
+        }
+
+        .hero h1 {
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #c084fc,
+                #818cf8,
+                #22d3ee,
+                #ec4899
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .typing {
+            min-height: 42px;
+            color: var(--muted);
+            font-size: clamp(18px, 3vw, 25px);
+            margin-bottom: 22px;
+        }
+
+        .cursor {
+            color: var(--primary);
+            animation: blink .8s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .hero-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social {
+            width: 42px;
+            height: 42px;
+            display: grid;
+            place-items: center;
+
+            border: 1px solid var(--border);
+            border-radius: 50%;
+
+            background: var(--card);
+            transition: .3s;
+        }
+
+        .social:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(168,85,247,.2);
+        }
+
+        /* =========================
+           PROFILE ORBIT
+        ========================== */
+
+        .profile-wrapper {
+            position: relative;
+            width: min(500px, 90vw);
+            height: min(500px, 90vw);
+            margin: auto;
+        }
+
+        .orbit {
+            position: absolute;
+            inset: 0;
+            border: 1px solid rgba(168,85,247,.28);
+            border-radius: 50%;
+            animation: rotate 18s linear infinite;
+        }
+
+        .orbit.two {
+            inset: 35px;
+            border-color: rgba(34,211,238,.2);
+            animation-duration: 25s;
+            animation-direction: reverse;
+        }
+
+        .orbit.three {
+            inset: 75px;
+            border-color: rgba(236,72,153,.18);
+            animation-duration: 32s;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .orbit-dot {
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 20px var(--primary);
+            top: 10px;
+            left: 50%;
+        }
+
+        .profile-card {
+            position: absolute;
+            inset: 105px;
+
+            border-radius: 50%;
+            padding: 7px;
+
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary),
+                var(--pink)
+            );
+
+            box-shadow:
+                0 0 70px rgba(168,85,247,.28);
+        }
+
+        .profile-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--bg-secondary);
+        }
+
+        .your-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-card {
+            padding: 35px;
+            border-radius: var(--radius);
+            background: var(--card);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+            box-shadow: var(--shadow);
+        }
+
+        .about-card h3 {
+            font-size: 25px;
+            margin-bottom: 18px;
+        }
+
+        .about-card p {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .about-highlight {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .highlight {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255,255,255,.035);
+            border: 1px solid var(--border);
+        }
+
+        .highlight strong {
+            display: block;
+            font-size: 22px;
+            color: var(--primary);
+        }
+
+        .highlight span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           SERVICES
+        ========================== */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 18px;
+        }
+
+        .service-card {
+            padding: 28px;
+            border-radius: var(--radius);
+            background: var(--card);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+            transition: .35s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(168,85,247,.4);
+            box-shadow: 0 20px 50px rgba(0,0,0,.25);
+        }
+
+        .service-icon {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+
+            border-radius: 16px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(168,85,247,.22),
+                    rgba(99,102,241,.15)
+                );
+
+            font-size: 23px;
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .skill-box {
+            padding: 25px;
+            border-radius: var(--radius);
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+
+        .skill {
+            margin-bottom: 22px;
+        }
+
+        .skill:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .skill-top span:last-child {
+            color: var(--primary);
+        }
+
+        .progress {
+            height: 7px;
+            border-radius: 999px;
+            background: rgba(255,255,255,.08);
+            overflow: hidden;
+        }
+
+        .progress span {
+            display: block;
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(
+                90deg,
+                var(--primary),
+                var(--secondary),
+                var(--cyan)
+            );
+
+            transform-origin: left;
+            animation: progress 1.5s ease forwards;
+        }
+
+        @keyframes progress {
+            from {
+                transform: scaleX(0);
+            }
+        }
+
+        /* =========================
+           TOOLS
+        ========================== */
+
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .tool {
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,.035);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           PORTFOLIO
+        ========================== */
+
+        .portfolio-controls {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .search {
+            width: min(500px,100%);
+            padding: 14px 18px;
+
+            border-radius: 999px;
+            border: 1px solid var(--border);
+
+            background: var(--card);
+            color: var(--text);
+
+            outline: none;
+        }
+
+        .search:focus {
+            border-color: var(--primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+
+        .project {
+            border-radius: var(--radius);
+            overflow: hidden;
+
+            background: var(--card);
+            border: 1px solid var(--border);
+
+            transition: .35s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+        }
+
+        .project-image {
+            height: 190px;
+            display: grid;
+            place-items: center;
+
+            font-size: 45px;
+
+            background:
+                radial-gradient(
+                    circle at 30% 30%,
+                    rgba(168,85,247,.35),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #17102e,
+                    #0c1735
+                );
+        }
+
+        .project-content {
+            padding: 22px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 999px;
+
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            color: #d8b4fe;
+            background: rgba(168,85,247,.12);
+
+            margin-bottom: 10px;
+        }
+
+        .project h3 {
+            margin-bottom: 8px;
+        }
+
+        .project p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           PROCESS
+        ========================== */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 18px;
+        }
+
+        .process-card {
+            position: relative;
+            padding: 28px 22px;
+            border-radius: var(--radius);
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+
+        .process-number {
+            font-family: "Orbitron", sans-serif;
+            color: var(--primary);
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .process-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .process-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           TESTIMONIAL
+        ========================== */
+
+        .testimonial {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+
+            padding: 40px;
+
+            border-radius: var(--radius);
+            background: var(--card);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(18px);
+        }
+
+        .quote {
+            font-size: 22px;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        .client {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 25px;
+        }
+
+        .contact-info,
+        .contact-form {
+            padding: 32px;
+            border-radius: var(--radius);
+            background: var(--card);
+            border: 1px solid var(--border);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 17px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 12px;
+
+            background: rgba(168,85,247,.10);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 7px;
+            color: var(--muted);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 15px;
+
+            border-radius: 13px;
+            border: 1px solid var(--border);
+
+            background: rgba(255,255,255,.035);
+            color: var(--text);
+
+            outline: none;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 35px 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: var(--text);
+        }
+
+        /* =========================
+           FLOATING BUTTONS
+        ========================== */
+
+        .floating {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            z-index: 900;
+        }
+
+        .floating a {
+            width: 48px;
+            height: 48px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary)
+            );
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.25);
+
+            transition: .3s;
+        }
+
+        .floating a:hover {
+            transform: translateY(-4px) scale(1.05);
+        }
+
+        /* =========================
+           REVEAL
+        ========================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: .8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media(max-width: 900px) {
+
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons,
+            .hero-socials {
+                justify-content: center;
+            }
+
+            .services-grid,
+            .portfolio-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-wrapper {
+                margin-top: 30px;
+            }
+
+        }
+
+        @media(max-width: 700px) {
+
+            .nav-links {
+                position: absolute;
+                top: 76px;
+                left: 15px;
+                right: 15px;
+
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+
+                padding: 18px;
+
+                background: rgba(12,8,32,.95);
+                border: 1px solid var(--border);
+                border-radius: 18px;
+
+                backdrop-filter: blur(20px);
+            }
+
+            body.light .nav-links {
+                background: rgba(255,255,255,.96);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 85px 18px;
+            }
+
+            .profile-wrapper {
+                width: 320px;
+                height: 320px;
+            }
+
+            .profile-card {
+                inset: 82px;
+            }
+
+            .about-highlight {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media(max-width: 450px) {
+
+            .profile-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+
+            .profile-card {
+                inset: 72px;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- GALAXY BACKGROUND -->
+    <div class="stars"></div>
+
+    <div class="nebula one"></div>
+    <div class="nebula two"></div>
+    <div class="nebula three"></div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <nav class="nav">
+
+            <a href="#home" class="logo">
+                ANDREA<span>.</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+            <div class="nav-actions">
+
+                <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+                    ☀
+                </button>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-grid">
+
+                <div class="reveal">
+
+                    <div class="hero-badge">
+                        <span></span>
+                        Available for Social Media Projects
+                    </div>
+
+                    <h1>
+                        Hi, I'm
+                        <span class="gradient-text">
+                            Andrea
+                        </span>
+                    </h1>
+
+                    <div class="typing">
+                        I'm a
+                        <strong id="typingText"></strong>
+                        <span class="cursor">|</span>
+                    </div>
+
+                    <p class="hero-description">
+                        I help businesses build a stronger online presence
+                        through engaging content, social media management,
+                        customer engagement, and creative digital marketing.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#portfolio" class="btn btn-primary">
+                            View My Work →
+                        </a>
+
+                        <a
+                            href="AndreaToyogon_Resumé(1).pdf"
+                            class="btn btn-outline"
+                            download
+                        >
+                            ↓ Download Resume
+                        </a>
+
+                    </div>
+
+                    <div class="hero-socials">
+
+                        <a
+                            href="mailto:toyogonandreamicol@gmail.com"
+                            class="social"
+                            aria-label="Email"
+                        >
+                            ✉
+                        </a>
+
+                        <a
+                            href="https://www.facebook.com/share/1Qm5m2xEGe/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social"
+                            aria-label="Facebook"
+                        >
+                            f
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE -->
+
+                <div class="profile-wrapper reveal">
+
+                    <div class="orbit">
+                        <div class="orbit-dot"></div>
+                    </div>
+
+                    <div class="orbit two">
+                        <div class="orbit-dot"></div>
+                    </div>
+
+                    <div class="orbit three">
+                        <div class="orbit-dot"></div>
+                    </div>
+
+                    <div class="profile-card">
+
+                        <div class="profile-inner">
+
+                            <img
+                                src="profile.png"
+                                alt="Andrea Toyogon"
+                                class="your-photo"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="small-title">
+                    About Me
+                </div>
+
+                <h2>
+                    Creative Mind.
+                    <span class="gradient-text">
+                        Digital Skills.
+                    </span>
+                </h2>
+
+                <p>
+                    Helping brands connect with their audience through
+                    thoughtful and engaging social media content.
+                </p>
+
+            </div>
+
+
+            <div class="about-grid">
+
+                <div class="about-card reveal">
+
+                    <h3>
+                        Who I Am
+                    </h3>
+
+                    <p>
+                        I'm Andrea, a Social Media Manager and Virtual
+                        Assistant with experience in customer engagement,
+                        content creation, Facebook management, and Canva
+                        design.
+                    </p>
+
+                    <p>
+                        I enjoy creating content that is not only visually
+                        appealing but also meaningful and relevant to the
+                        target audience.
+                    </p>
+
+                    <p>
+                        Although my previous social media management
+                        experience was a few years ago, I continue to
+                        strengthen my skills through self-study, research,
+                        and learning current social media practices.
+                    </p>
+
+                    <div class="about-highlight">
+
+                        <div class="highlight">
+                            <strong>Creative</strong>
+                            <span>Content & Visual Ideas</span>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>Reliable</strong>
+                            <span>Deadline-Focused Work</span>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>Attentive</strong>
+                            <span>Careful With Instructions</span>
+                        </div>
+
+                        <div class="highlight">
+                            <strong>Adaptable</strong>
+                            <span>Always Learning</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-card reveal">
+
+                    <h3>
+                        What I Can Bring to Your Business
+                    </h3>
+
+                    <p>
+                        I can help maintain your social media presence,
+                        create engaging content, respond to customers,
+                        organize content ideas, and support your digital
+                        marketing activities.
+                    </p>
+
+                    <p>
+                        My approach is simple: understand the brand first,
+                        understand the audience, study what is already
+                        working, and then create content that has a clear
+                        purpose.
+                    </p>
+
+                    <p>
+                        I also value communication and reliability. Once
+                        instructions are clear, I work independently while
+                        keeping the client updated about important progress.
+                    </p>
+
+                    <div class="tools">
+
+                        <span class="tool">Canva</span>
+                        <span class="tool">Facebook</span>
+                        <span class="tool">Instagram</span>
+                        <span class="tool">Content Creation</span>
+                        <span class="tool">Customer Support</span>
+                        <span class="tool">Research</span>
+                        <span class="tool">Lead Generation</span>
+                        <span class="tool">Social Media Strategy</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section id="services">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="small-title">
+                    My Services
+                </div>
+
+                <h2>
+                    How I Can
+                    <span class="gradient-text">
+                        Help Your Brand
+                    </span>
+                </h2>
+
+                <p>
+                    Practical social media and virtual assistance support
+                    designed to help keep your online presence consistent.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Social Media Management
+                    </h3>
+
+                    <p>
+                        Managing social media pages, content planning,
+                        posting support, audience engagement, and page
+                        maintenance.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Canva Design
+                    </h3>
+
+                    <p>
+                        Creating clean and engaging graphics for social
+                        media posts, promotions, announcements, and
+                        advertising.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        ✍
+                    </div>
+
+                    <h3>
+                        Content Creation
+                    </h3>
+
+                    <p>
+                        Developing educational, promotional, and
+                        engagement-focused content ideas based on the
+                        brand and target audience.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        Customer Engagement
+                    </h3>
+
+                    <p>
+                        Responding to customer inquiries professionally
+                        while helping maintain a positive experience on
+                        social media.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Lead Generation
+                    </h3>
+
+                    <p>
+                        Supporting research and lead-generation activities
+                        to help identify potential customers and business
+                        opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Social Media Research
+                    </h3>
+
+                    <p>
+                        Researching audience interests, trends, competitors,
+                        and relevant topics to develop useful content ideas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="small-title">
+                    Skills
+                </div>
+
+                <h2>
+                    My Digital
+                    <span class="gradient-text">
+                        Toolkit
+                    </span>
+                </h2>
+
+                <p>
+                    A combination of creative, organizational, and
+                    communication skills for social media work.
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-box reveal">
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+                            <span>Social Media Management</span>
+                            <span>90%</span>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:90%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+                            <span>Content Creation</span>
+                            <span>88%</span>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:88%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+                            <span>Canva Design</span>
+                            <span>90%</span>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:90%"></span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <div class="skill-top">
+                            <span>Customer Engagement</span>
+                            <span>92%</span>
+                        </div>
+
+                        <div class="progress">
+                            <span style="width:92%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skill-box reveal">
+
+                    <h3>
+                        Tools & Platforms
+                    </h3>
+
+                    <p style="color:var(--muted); margin-top:8px;">
+                        Tools I can use or continue developing proficiency
+                        with for social media and virtual assistance work.
+                    </p>
+
+                    <div class="tools">
+
+                        <span class="tool">Canva</span>
+                        <span class="tool">Facebook</span>
+                        <span class="tool">Instagram</span>
+                        <span class="tool">Google Workspace</span>
+                        <span class="tool">Google Docs</span>
+                        <span class="tool">Google Sheets</span>
+                        <span class="tool">Email</span>
+                        <span class="tool">Content Research</span>
+                        <span class="tool">Social Media Analytics</span>
+                        <span class="tool">Microsoft Office</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PORTFOLIO
+    ========================== -->
+
+    <section id="portfolio">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="small-title">
+                    Portfolio
+                </div>
+
+                <h2>
+                    Selected
+                    <span class="gradient-text">
+                        Sample Work
+                    </span>
+                </h2>
+
+                <p>
+                    Examples of the type of social media and digital
+                    assistance work I can provide.
+                </p>
+
+            </div>
+
+
+            <div class="portfolio-controls reveal">
+
+                <input
+                    type="search"
+                    id="projectSearch"
+                    class="search"
+                    placeholder="Search my sample work..."
+                >
+
+            </div>
+
+
+            <div class="portfolio-grid" id="portfolioGrid">
+
+
+                <article
+                    class="project reveal"
+                    data-title="Facebook Management Social Media"
+                >
+
+                    <div class="project-image">
+                        📱
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            Social Media
+                        </span>
+
+                        <h3>
+                            Facebook Page Management
+                        </h3>
+
+                        <p>
+                            Sample strategy for maintaining a Facebook
+                            page through consistent posting, customer
+                            engagement, and content planning.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="project reveal"
+                    data-title="Canva Social Media Graphics"
+                >
+
+                    <div class="project-image">
+                        🎨
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            Canva
+                        </span>
+
+                        <h3>
+                            Social Media Graphics
+                        </h3>
+
+                        <p>
+                            Sample promotional and engagement graphics
+                            designed for Facebook and other social media
+                            platforms.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="project reveal"
+                    data-title="Content Planning Social Media"
+                >
+
+                    <div class="project-image">
+                        📝
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            Content
+                        </span>
+
+                        <h3>
+                            Weekly Content Plan
+                        </h3>
+
+                        <p>
+                            A sample content planning workflow covering
+                            educational, promotional, and engagement posts.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="project reveal"
+                    data-title="Customer Support Facebook"
+                >
+
+                    <div class="project-image">
+                        💬
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            Engagement
+                        </span>
+
+                        <h3>
+                            Customer Support
+                        </h3>
+
+                        <p>
+                            Sample approach for responding to customer
+                            questions and handling concerns professionally.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="project reveal"
+                    data-title="Lead Generation Research"
+                >
+
+                    <div class="project-image">
+                        🔎
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            Research
+                        </span>
+
+                        <h3>
+                            Lead Generation
+                        </h3>
+
+                        <p>
+                            Sample lead research workflow focused on
+                            identifying potential customers and organizing
+                            relevant information.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="project reveal"
+                    data-title="Social Media Research Trends"
+                >
+
+                    <div class="project-image">
+                        📊
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-tag">
+                            Strategy
+                        </span>
+
+                        <h3>
+                            Social Media Research
+                        </h3>
+
+                        <p>
+                            Researching current topics, audience interests,
+                            and content opportunities to improve future
+                            social media posts.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROCESS
+    ========================== -->
+
+    <section id="process">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="small-title">
+                    My Process
+                </div>
+
+                <h2>
+                    How I Work With
+                    <span class="gradient-text">
+                        Your Brand
+                    </span>
+                </h2>
+
+                <p>
+                    A simple process that helps me understand the business
+                    before creating content.
+                </p>
+
+            </div>
+
+
+            <div class="process-grid">
+
+                <div class="process-card reveal">
+
+                    <div class="process-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Understand
+                    </h3>
+
+                    <p>
+                        Learn about the brand, products, services, audience,
+                        goals, and current social media presence.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card reveal">
+
+                    <div class="process-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Research
+                    </h3>
+
+                    <p>
+                        Review existing content, audience engagement,
+                        competitors, trends, and relevant topics.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card reveal">
+
+                    <div class="process-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Create
+                    </h3>
+
+                    <p>
+                        Develop content ideas, captions, graphics, and
+                        engagement-focused posts.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card reveal">
+
+                    <div class="process-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Improve
+                    </h3>
+
+                    <p>
+                        Review performance and use the available insights
+                        to improve future content.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TESTIMONIAL
+    ========================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="small-title">
+                    Work Style
+                </div>
+
+                <h2>
+                    What You Can
+                    <span class="gradient-text">
+                        Expect
+                    </span>
+                </h2>
+
+            </div>
+
+
+            <div class="testimonial reveal">
+
+                <div class="quote" id="quote">
+                    "I listen carefully to instructions, work independently,
+                    and make sure tasks are completed on time."
+                </div>
+
+                <div class="client" id="client">
+                    — Andrea's Work Philosophy
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-heading reveal">
+
+                <div class="small-title">
+                    Contact Me
+                </div>
+
+                <h2>
+                    Let's Work
+                    <span class="gradient-text">
+                        Together
+                    </span>
+                </h2>
+
+                <p>
+                    Have a project or social media task in mind?
+                    I'd be happy to discuss how I can help.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info reveal">
+
+                    <h3>
+                        Get In Touch
+                    </h3>
+
+                    <p>
+                        Send me a message and I'll get back to you as soon
+                        as possible.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <a href="mailto:toyogonandreamicol@gmail.com">
+                            toyogonandreamicol@gmail.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            f
+                        </div>
+
+                        <a
+                            href="https://www.facebook.com/share/1Qm5m2xEGe/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Facebook Profile
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            🌎
+                        </div>
+
+                        <span>
+                            Philippines
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="AndreaToyogon_Resumé(1).pdf"
+                        download
+                        class="btn btn-primary"
+                        style="margin-top:15px;"
+                    >
+                        ↓ Download My Resume
+                    </a>
+
+                </div>
+
+
+                <form
+                    class="contact-form reveal"
+                    id="contactForm"
+                >
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Your Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell me about your project..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                        style="width:100%;"
+                    >
+                        Send Message →
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © <span id="year"></span>
+            <strong>Andrea Toyogon</strong>.
+            All rights reserved.
+        </p>
+
+        <p style="margin-top:5px;">
+            Social Media Manager • Virtual Assistant
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         FLOATING BUTTONS
+    ========================== -->
+
+    <div class="floating">
+
+        <a
+            href="mailto:toyogonandreamicol@gmail.com"
+            aria-label="Email Andrea"
+        >
+            ✉
+        </a>
+
+        <a
+            href="https://www.facebook.com/share/1Qm5m2xEGe/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+        >
+            f
+        </a>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           MOBILE MENU
+        ========================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+
+            });
+
+        });
+
+
+        /* =========================
+           THEME TOGGLE
+        ========================== */
+
+        const themeBtn = document.getElementById("themeBtn");
+
+        themeBtn.addEventListener("click", () => {
+
+            document.body.classList.toggle("light");
+
+            if(document.body.classList.contains("light")) {
+
+                themeBtn.textContent = "☾";
+
+            } else {
+
+                themeBtn.textContent = "☀";
+
+            }
+
+        });
+
+
+        /* =========================
+           TYPING EFFECT
+        ========================== */
+
+        const typingText = document.getElementById("typingText");
+
+        const roles = [
+            "Social Media Manager",
+            "Virtual Assistant",
+            "Content Creator",
+            "Customer Support Specialist",
+            "Lead Generation Assistant"
+        ];
+
+        let roleIndex = 0;
+        let characterIndex = 0;
+        let deleting = false;
+
+        function typeEffect() {
+
+            const currentRole = roles[roleIndex];
+
+            if(!deleting) {
+
+                typingText.textContent =
+                    currentRole.substring(
+                        0,
+                        characterIndex + 1
+                    );
+
+                characterIndex++;
+
+                if(characterIndex === currentRole.length) {
+
+                    deleting = true;
+
+                    setTimeout(typeEffect, 1400);
+
+                    return;
+
+                }
+
+            } else {
+
+                typingText.textContent =
+                    currentRole.substring(
+                        0,
+                        characterIndex - 1
+                    );
+
+                characterIndex--;
+
+                if(characterIndex === 0) {
+
+                    deleting = false;
+
+                    roleIndex =
+                        (roleIndex + 1) % roles.length;
+
+                }
+
+            }
+
+            setTimeout(
+                typeEffect,
+                deleting ? 45 : 85
+            );
+
+        }
+
+        typeEffect();
+
+
+        /* =========================
+           SEARCH PORTFOLIO
+        ========================== */
+
+        const search =
+            document.getElementById("projectSearch");
+
+        const projects =
+            document.querySelectorAll(".project");
+
+        search.addEventListener("input", () => {
+
+            const value =
+                search.value.toLowerCase().trim();
+
+            projects.forEach(project => {
+
+                const title =
+                    project.dataset.title.toLowerCase();
+
+                if(title.includes(value)) {
+
+                    project.style.display = "";
+
+                } else {
+
+                    project.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+
+        /* =========================
+           SCROLL REVEAL
+        ========================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        const revealObserver =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if(entry.isIntersecting) {
+
+                            entry.target.classList.add("active");
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: .12
+                }
+            );
+
+        revealElements.forEach(element => {
+
+            revealObserver.observe(element);
+
+        });
+
+
+        /* =========================
+           TESTIMONIAL ROTATOR
+        ========================== */
+
+        const quotes = [
+
+            {
+                text:
+                "I listen carefully to instructions, work independently, and make sure tasks are completed on time.",
+
+                client:
+                "— Andrea's Work Philosophy"
+            },
+
+            {
+                text:
+                "My goal is to understand the brand first, then create content that is relevant to its audience.",
+
+                client:
+                "— Andrea's Approach"
+            },
+
+            {
+                text:
+                "I believe good communication and reliability are important when working with a client remotely.",
+
+                client:
+                "— Andrea's Work Style"
+            }
+
+        ];
+
+        let quoteIndex = 0;
+
+        setInterval(() => {
+
+            quoteIndex =
+                (quoteIndex + 1) % quotes.length;
+
+            document.getElementById("quote").style.opacity = "0";
+
+            setTimeout(() => {
+
+                document.getElementById("quote").textContent =
+                    '"' + quotes[quoteIndex].text + '"';
+
+                document.getElementById("client").textContent =
+                    quotes[quoteIndex].client;
+
+                document.getElementById("quote").style.opacity = "1";
+
+            }, 300);
+
+        }, 5000);
+
+
+        /* =========================
+           CONTACT FORM
+        ========================== */
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const message =
+                document.getElementById("message").value;
+
+            const subject =
+                encodeURIComponent(
+                    "Portfolio Inquiry from " + name
+                );
+
+            const body =
+                encodeURIComponent(
+                    "Name: " + name +
+                    "\nEmail: " + email +
+                    "\n\nMessage:\n" + message
+                );
+
+            window.location.href =
+                "mailto:toyogonandreamicol@gmail.com" +
+                "?subject=" + subject +
+                "&body=" + body;
+
+        });
+
+
+        /* =========================
+           CURRENT YEAR
+        ========================== */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
